@@ -136,7 +136,7 @@ const Contact = () => {
                     <div className="space-y-10 reveal" style={{ animationDelay: '300ms' }}>
                         <div className={`relative rounded-[3.5rem] overflow-hidden border h-[300px] shadow-2xl group transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-900 border-white/10' : 'bg-slate-100 border-slate-200'}`}>
                             <iframe
-                                title="South SOUTH RIFT VALLEY Hotel Map"
+                                title="South RIFT VALLEY Hotel Map"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.8238364808835!2d38.7715959!3d8.9883524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8541cfa1d641%3A0xf727f5851b193a75!2sRift%20valley%20hotel!5e0!3m2!1sam!2set!4v1766671670298!5m2!1sam!2set"
                                 className={`absolute inset-0 w-full h-full transition-all duration-1000 ${theme === 'dark' ? 'opacity-80 group-hover:opacity-100 brightness-75 contrasts-125' : 'opacity-100'}`}
                                 allowFullScreen=""

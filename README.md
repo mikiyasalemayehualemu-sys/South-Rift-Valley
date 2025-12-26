@@ -1,16 +1,29 @@
-# React + Vite
+# South Rift Valley Hotel - Web Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, multi-lingual, and theme-aware web application for the South Rift Valley Hotel. Built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
+- **Traditional Heritage Aesthetic:** Culturally-rooted design reflecting Ethiopian hospitality.
+- **Multi-lingual Support:** Full support for English, Amharic, Afaan Oromo, and Tigrinya.
+- **Dark/Light Mode:** Sophisticated theme toggling for enhanced user experience.
+- **Local Asset Hosting:** All images are hosted locally to ensure reliable loading and offline capabilities.
+- **Responsive Design:** Optimized for mobile, tablet, and desktop viewing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Deployment on Vercel
+This project is configured for seamless deployment on Vercel.
 
-## React Compiler
+1. **Connect to GitHub/GitLab:** Push the project to a remote repository.
+2. **Import Project:** Select the repository in the Vercel dashboard.
+3. **Build Settings:**
+   - **Framework Preset:** Vite
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+4. **Deploy:** Hit deploy and Vercel will handle the rest.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The project includes a `vercel.json` file to handle client-side routing for the Single Page Application (SPA).
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technical Stack
+- **Frontend:** React 19, Vite 7
+- **Styling:** Tailwind CSS 4, Lucide Icons
+- **Routing:** React Router 7
+- **Translations:** Custom Context-based i18n

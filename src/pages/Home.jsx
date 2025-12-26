@@ -19,39 +19,29 @@ const Home = () => {
 
     const features = [
         {
-            icon: <Coffee className="w-6 h-6 text-amber-500" />,
+            icon: <Coffee className="w-8 h-8 text-emerald-500" />,
             title: t('features.great_coffee'),
             desc: "Authentic beans, expert roasting.",
-            bg: "bg-amber-500/10",
-            size: "col-span-1"
         },
         {
-            icon: <Beer className="w-6 h-6 text-emerald-500" />,
+            icon: <Beer className="w-8 h-8 text-emerald-500" />,
             title: t('features.great_beer'),
             desc: "Local crafts & international favorites.",
-            bg: "bg-emerald-500/10",
-            size: "col-span-1"
         },
         {
-            icon: <Flame className="w-6 h-6 text-orange-500" />,
+            icon: <Flame className="w-8 h-8 text-emerald-500" />,
             title: t('features.fireplace'),
             desc: "Cozy evenings by the crackling fire.",
-            bg: "bg-orange-500/10",
-            size: "col-span-1"
         },
         {
-            icon: <Star className="w-8 h-8 text-yellow-500" />,
-            title: `4.6 ${t('features.highlights')}`,
-            desc: t('hero.rating'),
-            bg: "bg-yellow-500/5",
-            size: "col-span-1 md:col-span-2"
+            icon: <Star className="w-8 h-8 text-emerald-500" />,
+            title: `4.6 Rating`,
+            desc: "Verified comfort and hospitality.",
         },
         {
-            icon: <Wine className="w-6 h-6 text-purple-500" />,
+            icon: <Wine className="w-8 h-8 text-emerald-500" />,
             title: t('features.great_wine'),
             desc: "A curated list for connoisseurs.",
-            bg: "bg-purple-500/10",
-            size: "col-span-1"
         },
     ];
 
@@ -169,45 +159,43 @@ const Home = () => {
                         {features.map((item, idx) => (
                             <div
                                 key={idx}
-                                className={`${item.size} glass border p-10 rounded-[2.5rem] hover:border-emerald-500/30 transition-all group reveal relative overflow-hidden ${theme === 'dark' ? 'border-white/5 bg-white/[0.02]' : 'border-slate-200 bg-slate-50'
+                                className={`p-10 rounded-[2.5rem] border transition-all duration-500 group reveal ${theme === 'dark'
+                                    ? 'bg-slate-900/40 border-white/5 hover:border-emerald-500/20 hover:bg-slate-900/60'
+                                    : 'bg-white border-slate-200 hover:border-emerald-500/20 hover:shadow-xl'
                                     }`}
                                 style={{ animationDelay: `${idx * 100}ms` }}
                             >
-                                <div className={`mb-8 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500 shadow-xl group-hover:shadow-emerald-500/20 ${theme === 'dark' ? 'bg-slate-900' : 'bg-white border border-slate-100'
+                                <div className={`mb-8 w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-500 ${theme === 'dark' ? 'bg-slate-800' : 'bg-slate-50'
                                     }`}>
                                     {item.icon}
                                 </div>
                                 <h3 className={`text-2xl font-black mb-3 font-display ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{item.title}</h3>
                                 <p className={`leading-relaxed font-medium ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>{item.desc}</p>
-
-                                <div className="mt-8 pt-8 border-t border-white/5">
-                                    <Link to="/about" className="text-emerald-500 text-xs font-black uppercase tracking-[0.2em] flex items-center gap-2 group-hover:translate-x-2 transition-transform">
-                                        {t('common.learn_more')} <ArrowRight className="w-3.5 h-3.5" />
-                                    </Link>
-                                </div>
                             </div>
                         ))}
 
-                        {/* Directions Bento Box */}
+                        {/* Modern Directions Card */}
                         <div
-                            className={`col-span-1 md:col-span-2 lg:col-span-1 glass-emerald p-10 rounded-[2.5rem] relative overflow-hidden group cursor-pointer reveal shadow-2xl shadow-emerald-500/10`}
+                            className={`p-10 rounded-[2.5rem] border transition-all duration-500 group reveal relative overflow-hidden ${theme === 'dark'
+                                ? 'bg-emerald-500/5 border-emerald-500/20 hover:bg-emerald-500/10'
+                                : 'bg-emerald-50 border-emerald-100 hover:shadow-xl'
+                                }`}
                             style={{ animationDelay: '500ms' }}
                         >
                             <div className="relative z-10">
-                                <div className="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center text-white mb-8 group-hover:rotate-12 transition-transform shadow-2xl shadow-emerald-500/40">
+                                <div className="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
                                     <MapPin className="w-7 h-7" />
                                 </div>
-                                <h3 className="text-3xl font-black text-white mb-3 font-display">{t('hero.cta_directions')}</h3>
-                                <p className="text-emerald-50/80 mb-10 font-medium">XQQC+8J Addis Ababa, In front of Ibex Hotel</p>
+                                <h3 className={`text-2xl font-black mb-3 font-display ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{t('hero.cta_directions')}</h3>
+                                <p className={`font-medium mb-8 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>XQQC+8J Addis Ababa, In front of Ibex Hotel</p>
                                 <Link
                                     to="/contact"
-                                    className="flex items-center text-white font-black text-xs uppercase tracking-[0.3em] bg-white/20 hover:bg-white/30 px-6 py-4 rounded-full w-fit backdrop-blur-md transition-all"
+                                    className="flex items-center text-emerald-500 font-black text-xs uppercase tracking-[0.3em] font-display hover:translate-x-2 transition-transform"
                                 >
                                     <span>{t('hero.cta_directions')}</span>
-                                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
+                                    <ArrowRight className="w-4 h-4 ml-2" />
                                 </Link>
                             </div>
-                            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/10 rounded-full blur-[100px]"></div>
                         </div>
                     </div>
                 </div>

@@ -117,17 +117,6 @@ const Rooms = () => {
                                     ))}
                                 </div>
 
-                                <div className="mt-auto pt-6">
-                                    <a
-                                        href={`https://wa.me/251000000000?text=${encodeURIComponent(`Hi, I'm interested in booking the ${room.name}.`)}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full group/btn relative bg-emerald-500 hover:bg-emerald-600 text-white font-black py-5 rounded-[1.5rem] transition-all flex items-center justify-center gap-3 shadow-2xl shadow-emerald-500/20"
-                                    >
-                                        <span className="uppercase tracking-widest text-sm font-display font-black">{t('common.book_now')}</span>
-                                        <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     ))}

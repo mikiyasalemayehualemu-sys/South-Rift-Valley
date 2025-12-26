@@ -8,7 +8,7 @@ export const translations = {
             contact: "Contact",
         },
         hero: {
-            title: "South SOUTH RIFT VALLEY Hotel",
+            title: "South Rift Valley Hotel",
             subtitle: "Your Comfort is Our Priority. Experience luxury and local hospitality.",
             cta_call: "Call Now",
             cta_whatsapp: "WhatsApp Us",
@@ -19,7 +19,7 @@ export const translations = {
         },
         home: {
             excellence_title: "Excellence in Every Detail",
-            excellence_desc: "Discover why South SOUTH RIFT VALLEY Hotel is the premier choice for travelers seeking authenticity and comfort.",
+            excellence_desc: "Discover why South Rift Valley Hotel is the premier choice for travelers seeking authenticity and comfort.",
             atmosphere_narrative: "An atmosphere that blends historic charm with modern luxury, perfectly suited for every traveler.",
         },
         contact: {
@@ -43,7 +43,7 @@ export const translations = {
         },
         about: {
             title: "Our Story",
-            narrative: "Rooted in the heart of Addis Ababa, South SOUTH RIFT VALLEY Hotel has been a beacon of hospitality for generations.",
+            narrative: "Rooted in the heart of Addis Ababa, South Rift Valley Hotel has been a beacon of hospitality for generations.",
             atmosphere_title: "Atmosphere & Vibe",
             accessibility_title: "Accessibility & Comfort",
             trust_title: "Trust & Safety",
@@ -266,7 +266,7 @@ export const translations = {
             contact: "Nu Quunnamaa",
         },
         hero: {
-            title: "South SOUTH RIFT VALLEY Hoteela",
+            title: "South Rift Valley Hoteela",
             subtitle: "Miriitii keessaniif dursa ni kennina. Qananii fi keessummeessummaa naannoo muuxannoo godhadha.",
             cta_call: "Amma Bilbilaa",
             cta_whatsapp: "WhatsApp nuun quunnamaa",
@@ -277,7 +277,7 @@ export const translations = {
         },
         home: {
             excellence_title: "Baraaqaa Tokkoo Tokkoon",
-            excellence_desc: "Maaliif South SOUTH RIFT VALLEY Hoteelli filannoo duraa akka ta'e bari.",
+            excellence_desc: "Maaliif South Rift Valley Hoteelli filannoo duraa akka ta'e bari.",
             atmosphere_narrative: "Bakka seenaa fi ammayyummaan walitti dhufan.",
         },
         contact: {
@@ -301,7 +301,7 @@ export const translations = {
         },
         about: {
             title: "Seenaa Keenya",
-            narrative: "Addis Ababa keessatti kan hundeeffame, South SOUTH RIFT VALLEY Hoteelli kutaalee dhalootaaf tajaajilaa tureera.",
+            narrative: "Addis Ababa keessatti kan hundeeffame, South Rift Valley Hoteelli kutaalee dhalootaaf tajaajilaa tureera.",
             atmosphere_title: "Haala Qilleensaa",
             accessibility_title: "Daqqabamummaa Fi Miriitii",
             trust_title: "Amanummaa Fi Nageenya",

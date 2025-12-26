@@ -5,6 +5,7 @@ import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import ScrollToTop from './components/ScrollToTop';
 
 // Lazy load pages for performance
 const Home = lazy(() => import('./pages/Home'));
@@ -18,6 +19,7 @@ function AppContent() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className={`min-h-screen font-sans selection:bg-emerald-500 selection:text-white flex flex-col transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
         <Header />
         <main className="flex-grow">
