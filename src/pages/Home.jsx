@@ -111,7 +111,7 @@ const Home = () => {
             </section>
 
             {/* Bento Features Grid */}
-            <section className={`py-32 px-4 transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-950' : 'bg-white'}`}>
+            <section className={`py-20 md:py-32 px-4 transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-950' : 'bg-white'}`}>
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 md:mb-20 space-y-4 reveal">
                         <h2 className={`text-3xl md:text-6xl font-black font-display leading-[1.1] ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
@@ -126,7 +126,7 @@ const Home = () => {
                         {features.map((item, idx) => (
                             <div
                                 key={idx}
-                                className={`p-10 rounded-[2.5rem] border transition-all duration-500 group reveal ${theme === 'dark'
+                                className={`p-8 md:p-10 rounded-[2.5rem] border transition-all duration-500 group reveal ${theme === 'dark'
                                     ? 'bg-slate-900/40 border-white/5 hover:border-emerald-500/20 hover:bg-slate-900/60'
                                     : 'bg-white border-slate-200 hover:border-emerald-500/20 hover:shadow-xl'
                                     }`}
@@ -143,7 +143,7 @@ const Home = () => {
 
                         {/* Modern Directions Card */}
                         <div
-                            className={`p-10 rounded-[2.5rem] border transition-all duration-500 group reveal relative overflow-hidden ${theme === 'dark'
+                            className={`p-8 md:p-10 rounded-[2.5rem] border transition-all duration-500 group reveal relative overflow-hidden ${theme === 'dark'
                                 ? 'bg-emerald-500/5 border-emerald-500/20 hover:bg-emerald-500/10'
                                 : 'bg-emerald-50 border-emerald-100 hover:shadow-xl'
                                 }`}

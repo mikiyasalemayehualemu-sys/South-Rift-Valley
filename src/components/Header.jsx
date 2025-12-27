@@ -31,8 +31,8 @@ const Header = () => {
     return (
         <header className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-950/80 border-white/10' : 'bg-white/80 border-slate-200'
             }`}>
-            <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-                <Link to="/" className="text-2xl sm:text-2xl font-black bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-display tracking-tight transition-all">
+            <div className="max-w-7xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
+                <Link to="/" className="text-lg sm:text-2xl font-black bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-display tracking-tight transition-all">
                     SOUTH RIFT VALLEY
                 </Link>
 
@@ -114,7 +114,7 @@ const Header = () => {
                         {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                     </button>
                     <button className={theme === 'dark' ? 'text-slate-300' : 'text-slate-600'} onClick={() => setIsOpen(!isOpen)}>
-                        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        {isOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
                     </button>
                 </div>
             </div>
@@ -123,24 +123,28 @@ const Header = () => {
             {isOpen && (
                 <div className={`md:hidden animate-in slide-in-from-top duration-300 border-b ${theme === 'dark' ? 'bg-slate-950 border-white/10' : 'bg-white border-slate-200'
                     }`}>
-                    <div className="px-6 pt-4 pb-10 flex flex-col space-y-6">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.path}
-                                to={link.path}
-                                onClick={() => setIsOpen(false)}
-                                className={`text-3xl font-black font-display transition-colors ${activePath === link.path
-                                    ? 'text-emerald-400'
-                                    : theme === 'dark' ? 'text-slate-300' : 'text-slate-700'
-                                    }`}
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
+                    <div className="px-6 pt-2 pb-8 flex flex-col space-y-4">
+                        <div className="flex gap-8">
+                            {/* Left Side: Nav Links */}
+                            <div className="flex-1 flex flex-col space-y-4 pt-2">
+                                {navLinks.map((link) => (
+                                    <Link
+                                        key={link.path}
+                                        to={link.path}
+                                        onClick={() => setIsOpen(false)}
+                                        className={`text-base font-black font-display transition-colors ${activePath === link.path
+                                            ? 'text-emerald-400'
+                                            : theme === 'dark' ? 'text-slate-300' : 'text-slate-700'
+                                            }`}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                ))}
+                            </div>
 
-                        <div className="pt-6 border-t border-white/5">
-                            <p className="text-xs text-slate-500 mb-4 uppercase tracking-[0.2em] font-black">Select Language / ቋንቋ ምረጥ</p>
-                            <div className="grid grid-cols-2 gap-3">
+                            {/* Right Side: Language Selection */}
+                            <div className="w-32 flex flex-col space-y-2 border-l border-white/5 pl-6 pt-2">
+                                <p className="text-[10px] text-slate-500 mb-2 uppercase tracking-widest font-black leading-tight">Lang / ቋንቋ</p>
                                 {langs.map((l) => (
                                     <button
                                         key={l.code}
@@ -148,12 +152,12 @@ const Header = () => {
                                             setLanguage(l.code);
                                             setIsOpen(false);
                                         }}
-                                        className={`px-4 py-4 rounded-2xl text-center text-sm font-bold transition-all ${language === l.code
+                                        className={`px-3 py-2.5 rounded-xl text-center text-[10px] font-black tracking-widest transition-all uppercase ${language === l.code
                                             ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/20'
                                             : theme === 'dark' ? 'bg-white/5 text-slate-400' : 'bg-slate-100 text-slate-600'
                                             }`}
                                     >
-                                        {l.full}
+                                        {l.label}
                                     </button>
                                 ))}
                             </div>
@@ -161,9 +165,9 @@ const Header = () => {
 
                         <a
                             href="tel:+251000000000"
-                            className="flex items-center justify-center space-x-3 bg-emerald-500 py-5 rounded-[1.5rem] text-white font-black text-lg shadow-2xl shadow-emerald-500/30"
+                            className="flex items-center justify-center space-x-3 bg-emerald-500 py-3.5 rounded-xl text-white font-black text-sm shadow-xl shadow-emerald-500/30"
                         >
-                            <Phone className="w-5 h-5" />
+                            <Phone className="w-3.5 h-3.5" />
                             <span className="uppercase tracking-widest">{t('hero.cta_call')}</span>
                         </a>
                     </div>

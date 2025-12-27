@@ -55,7 +55,7 @@ const About = () => {
 
             {/* Content Section */}
             <section className={`py-32 px-4 border-y transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-900/50 border-white/5' : 'bg-white border-slate-100'}`}>
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                     <div className="relative group reveal">
                         <div className={`aspect-square rounded-[3.5rem] overflow-hidden border relative shadow-2xl ${theme === 'dark' ? 'border-white/5' : 'border-slate-200'}`}>
                             <img
@@ -125,7 +125,7 @@ const About = () => {
 
             {/* Founders/Commitment Section */}
             <section className={`py-32 px-4 transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-950' : 'bg-slate-50'}`}>
-                <div className={`max-w-7xl mx-auto rounded-[4rem] p-12 md:p-24 border relative overflow-hidden reveal ${theme === 'dark' ? 'bg-gradient-to-br from-slate-900 to-slate-950 border-white/5' : 'bg-white border-slate-200 shadow-xl'}`}>
+                <div className={`max-w-7xl mx-auto rounded-[3rem] md:rounded-[4rem] p-8 md:p-24 border relative overflow-hidden reveal ${theme === 'dark' ? 'bg-gradient-to-br from-slate-900 to-slate-950 border-white/5' : 'bg-white border-slate-200 shadow-xl'}`}>
                     <div className="max-w-3xl space-y-10 relative z-10">
                         <h2 className={`text-3xl md:text-7xl font-black font-display leading-[1.1] ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
                             {t('about.commitment_title').split(' ')[0]} <br />
@@ -150,7 +150,7 @@ const About = () => {
                         {t('common.contact_us').split(' ')[0]} <br /> {t('common.contact_us').split(' ').slice(1).join(' ')}
                     </h2>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <a href="tel:+251000000000" className="group w-full sm:w-auto px-16 py-7 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xl rounded-[2rem] transition-all shadow-[0_20px_50px_rgba(16,185,129,0.3)] flex items-center justify-center gap-3 hover:-translate-y-2">
+                        <a href="tel:+251000000000" className="group w-full sm:w-auto px-10 py-5 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-lg rounded-2xl transition-all shadow-[0_20px_50px_rgba(16,185,129,0.3)] flex items-center justify-center gap-3 hover:-translate-y-2">
                             {t('hero.cta_call')}
                             <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                         </a>

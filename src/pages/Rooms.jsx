@@ -92,13 +92,13 @@ const Rooms = () => {
                                 </div>
                             </div>
 
-                            <div className="p-8 md:p-10 flex-grow flex flex-col space-y-6">
-                                <div className="space-y-2">
-                                    <h3 className={`text-2xl md:text-3xl font-black font-display group-hover:text-emerald-500 transition-colors ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{room.name}</h3>
-                                    <div className="flex items-center gap-3 text-slate-500 text-[11px] md:text-sm font-black uppercase tracking-[0.2em] font-display">
-                                        <div className="flex items-center gap-1.5"><Users className="w-4 h-4" />{room.capacity}</div>
+                            <div className="p-6 md:p-10 flex-grow flex flex-col space-y-4">
+                                <div className="space-y-1">
+                                    <h3 className={`text-xl md:text-3xl font-black font-display group-hover:text-emerald-500 transition-colors ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{room.name}</h3>
+                                    <div className="flex items-center gap-3 text-slate-500 text-[10px] md:text-sm font-black uppercase tracking-[0.2em] font-display">
+                                        <div className="flex items-center gap-1.5"><Users className="w-3.5 h-3.5" />{room.capacity}</div>
                                         <span className="w-1 h-1 bg-slate-700 rounded-full"></span>
-                                        <div className="flex items-center gap-1.5"><Maximize className="w-4 h-4" />{room.size}</div>
+                                        <div className="flex items-center gap-1.5"><Maximize className="w-3.5 h-3.5" />{room.size}</div>
                                     </div>
                                 </div>
 
@@ -106,11 +106,11 @@ const Rooms = () => {
                                     {room.desc}
                                 </p>
 
-                                <div className={`grid grid-cols-1 gap-4 py-6 border-y ${theme === 'dark' ? 'border-white/5' : 'border-slate-100'}`}>
+                                <div className={`grid grid-cols-1 gap-3 py-4 border-y ${theme === 'dark' ? 'border-white/5' : 'border-slate-100'}`}>
                                     {room.features.slice(0, 4).map((feature, i) => (
-                                        <div key={i} className={`flex items-center space-x-3 text-sm font-medium ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
-                                            <div className="w-5 h-5 bg-emerald-500/10 rounded-full flex items-center justify-center border border-emerald-500/20">
-                                                <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+                                        <div key={i} className={`flex items-center space-x-3 text-xs font-medium ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
+                                            <div className="w-4 h-4 bg-emerald-500/10 rounded-full flex items-center justify-center border border-emerald-500/20">
+                                                <CheckCircle2 className="w-2.5 h-2.5 text-emerald-500" />
                                             </div>
                                             <span>{feature}</span>
                                         </div>
