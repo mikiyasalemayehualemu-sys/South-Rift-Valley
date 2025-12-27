@@ -57,10 +57,10 @@ const Rooms = () => {
             <section className="py-24 px-4 text-center relative overflow-hidden reveal">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.1),transparent_70%)] pointer-events-none"></div>
                 <div className="relative z-10 max-w-4xl mx-auto space-y-6">
-                    <h1 className={`text-5xl md:text-8xl font-black font-display leading-tight ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
+                    <h1 className={`text-4xl md:text-8xl font-black font-display leading-[1.1] ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
                         {t('rooms.title').split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">{t('rooms.title').split(' ').slice(1).join(' ')}</span>
                     </h1>
-                    <p className={`max-w-2xl mx-auto text-xl font-sans leading-relaxed ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
+                    <p className={`max-w-2xl mx-auto text-lg md:text-xl font-sans leading-relaxed ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
                         {t('rooms.subtitle')}
                     </p>
                 </div>
@@ -83,22 +83,22 @@ const Rooms = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
                                 <div className="absolute top-6 left-6 flex items-center gap-2">
-                                    <div className="bg-emerald-500 text-white font-black px-5 py-2 rounded-2xl text-xs uppercase tracking-widest shadow-xl">
+                                    <div className="bg-emerald-500 text-white font-black px-5 py-2 rounded-2xl text-sm uppercase tracking-widest shadow-xl">
                                         {room.price}
                                     </div>
-                                    <div className="glass px-4 py-2 rounded-2xl text-[10px] font-black uppercase tracking-widest text-white/80 border border-white/10">
+                                    <div className="glass px-4 py-2 rounded-2xl text-xs font-black uppercase tracking-widest text-white/80 border border-white/10">
                                         {room.tag}
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="p-10 flex-grow flex flex-col space-y-6">
+                            <div className="p-8 md:p-10 flex-grow flex flex-col space-y-6">
                                 <div className="space-y-2">
-                                    <h3 className={`text-3xl font-black font-display group-hover:text-emerald-500 transition-colors ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{room.name}</h3>
-                                    <div className="flex items-center gap-3 text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] font-display">
-                                        <div className="flex items-center gap-1.5"><Users className="w-3.5 h-3.5" />{room.capacity}</div>
+                                    <h3 className={`text-2xl md:text-3xl font-black font-display group-hover:text-emerald-500 transition-colors ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{room.name}</h3>
+                                    <div className="flex items-center gap-3 text-slate-500 text-[11px] md:text-sm font-black uppercase tracking-[0.2em] font-display">
+                                        <div className="flex items-center gap-1.5"><Users className="w-4 h-4" />{room.capacity}</div>
                                         <span className="w-1 h-1 bg-slate-700 rounded-full"></span>
-                                        <div className="flex items-center gap-1.5"><Maximize className="w-3.5 h-3.5" />{room.size}</div>
+                                        <div className="flex items-center gap-1.5"><Maximize className="w-4 h-4" />{room.size}</div>
                                     </div>
                                 </div>
 
@@ -126,11 +126,11 @@ const Rooms = () => {
             {/* Elite Inclusion Strip */}
             <section className={`py-32 px-4 transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-950' : 'bg-slate-50'}`}>
                 <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-20 space-y-4">
-                        <h2 className={`text-4xl font-black font-display ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+                    <div className="text-center mb-16 md:mb-20 space-y-4">
+                        <h2 className={`text-3xl md:text-4xl font-black font-display ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
                             {t('rooms.elite_inclusions').split(' ')[0]} <span className="text-emerald-500">{t('rooms.elite_inclusions').split(' ').slice(1).join(' ')}</span>
                         </h2>
-                        <p className={`max-w-xl mx-auto font-medium ${theme === 'dark' ? 'text-slate-500' : 'text-slate-600'}`}>
+                        <p className={`max-w-xl mx-auto font-medium text-sm md:text-base ${theme === 'dark' ? 'text-slate-500' : 'text-slate-600'}`}>
                             Every suite is curated with premium features to guarantee yours remains a five-star experience.
                         </p>
                     </div>
@@ -147,28 +147,13 @@ const Rooms = () => {
                                     {React.cloneElement(service.icon, { className: "w-10 h-10" })}
                                 </div>
                                 <h4 className={`font-black text-xl mb-2 font-display ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{service.title}</h4>
-                                <p className={`text-xs font-black uppercase tracking-widest ${theme === 'dark' ? 'text-slate-500' : 'text-slate-400'}`}>{service.desc}</p>
+                                <p className={`text-sm font-black uppercase tracking-widest ${theme === 'dark' ? 'text-slate-500' : 'text-slate-400'}`}>{service.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Booking Strip */}
-            <section className="pb-32 px-4">
-                <div className="max-w-5xl mx-auto glass-emerald rounded-[4rem] p-12 md:p-24 border border-emerald-500/20 text-center relative overflow-hidden reveal shadow-2xl shadow-emerald-500/20">
-                    <div className="relative z-10 space-y-10">
-                        <h2 className="text-4xl md:text-7xl font-black text-white font-display leading-tight">The SOUTH RIFT VALLEY Horizon <br />Awaits Your Arrival</h2>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
-                            <a href="tel:+251000000000" className="px-16 py-7 bg-white text-emerald-600 rounded-[2rem] font-black text-xl hover:bg-emerald-50 transition-all shadow-2xl hover:-translate-y-2">
-                                {t('common.connect_room_service')}
-                            </a>
-                        </div>
-                    </div>
-                    <div className="absolute top-0 left-0 w-80 h-80 bg-white/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
-                    <div className="absolute bottom-0 right-0 w-[40rem] h-[40rem] bg-black/10 rounded-full blur-[150px] translate-x-1/3 translate-y-1/3"></div>
-                </div>
-            </section>
         </div>
     );
 };

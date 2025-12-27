@@ -41,10 +41,10 @@ const About = () => {
                         <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
                         <span className="text-emerald-500 text-xs font-black uppercase tracking-[0.2em] font-display">Crafting Memories Since 2014</span>
                     </div>
-                    <h1 className={`text-5xl md:text-7xl font-black mb-8 font-display ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
+                    <h1 className={`text-4xl md:text-7xl font-black mb-6 md:mb-8 font-display ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
                         {t('about.title').split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">{t('about.title').split(' ').slice(1).join(' ')}</span>
                     </h1>
-                    <p className={`text-xl leading-relaxed font-sans max-w-2xl mx-auto ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
+                    <p className={`text-lg md:text-xl leading-relaxed font-sans max-w-2xl mx-auto ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
                         {t('about.narrative')}
                     </p>
                 </div>
@@ -65,8 +65,8 @@ const About = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
                         </div>
-                        <div className="absolute -bottom-8 -right-8 bg-emerald-500 p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(16,185,129,0.3)] hidden md:block group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-500">
-                            <p className="text-white font-black text-6xl font-display tracking-tighter">10+</p>
+                        <div className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 bg-emerald-500 p-8 md:p-12 rounded-[2rem] md:rounded-[2.5rem] shadow-[0_20px_50px_rgba(16,185,129,0.3)] group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-500">
+                            <p className="text-white font-black text-4xl md:text-6xl font-display tracking-tighter">10+</p>
                             <p className="text-emerald-50 text-xs font-black uppercase tracking-widest mt-1">{t('about.excellence_years').split(' ').join('<br />')}</p>
                         </div>
                     </div>
@@ -127,7 +127,7 @@ const About = () => {
             <section className={`py-32 px-4 transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-950' : 'bg-slate-50'}`}>
                 <div className={`max-w-7xl mx-auto rounded-[4rem] p-12 md:p-24 border relative overflow-hidden reveal ${theme === 'dark' ? 'bg-gradient-to-br from-slate-900 to-slate-950 border-white/5' : 'bg-white border-slate-200 shadow-xl'}`}>
                     <div className="max-w-3xl space-y-10 relative z-10">
-                        <h2 className={`text-4xl md:text-7xl font-black font-display leading-tight ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
+                        <h2 className={`text-3xl md:text-7xl font-black font-display leading-[1.1] ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
                             {t('about.commitment_title').split(' ')[0]} <br />
                             <span className="text-emerald-500">{t('about.commitment_title').split(' ').slice(1).join(' ')}</span>
                         </h2>

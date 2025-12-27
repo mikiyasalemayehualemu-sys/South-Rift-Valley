@@ -27,7 +27,7 @@ const Contact = () => {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.1),transparent_70%)] pointer-events-none"></div>
 
                 <div className="relative z-10 max-w-4xl mx-auto space-y-6">
-                    <h1 className={`text-5xl md:text-8xl font-black font-display leading-tight ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>{t('nav.contact')}</h1>
+                    <h1 className={`text-4xl md:text-8xl font-black font-display leading-[1.1] ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>{t('nav.contact')}</h1>
                     <p className={`max-w-2xl mx-auto text-xl font-sans leading-relaxed ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
                         {t('contact.subtitle')}
                     </p>
@@ -134,7 +134,7 @@ const Contact = () => {
 
                     {/* Compact Map & Support */}
                     <div className="space-y-10 reveal" style={{ animationDelay: '300ms' }}>
-                        <div className={`relative rounded-[3.5rem] overflow-hidden border h-[300px] shadow-2xl group transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-900 border-white/10' : 'bg-slate-100 border-slate-200'}`}>
+                        <div className={`relative rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border h-[250px] md:h-[300px] shadow-2xl group transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-900 border-white/10' : 'bg-slate-100 border-slate-200'}`}>
                             <iframe
                                 title="South RIFT VALLEY Hotel Map"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.8238364808835!2d38.7715959!3d8.9883524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8541cfa1d641%3A0xf727f5851b193a75!2sRift%20valley%20hotel!5e0!3m2!1sam!2set!4v1766671670298!5m2!1sam!2set"
@@ -167,13 +167,13 @@ const Contact = () => {
                         </div>
 
                         {/* Support Card */}
-                        <div className={`p-8 glass rounded-[2.5rem] border flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-emerald-500/40 transition-all ${theme === 'dark' ? 'border-emerald-500/20 bg-white/[0.02]' : 'border-slate-200 bg-white shadow-lg'}`}>
+                        <div className={`p-6 md:p-8 glass rounded-[2.5rem] border flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-emerald-500/40 transition-all ${theme === 'dark' ? 'border-emerald-500/20 bg-white/[0.02]' : 'border-slate-200 bg-white shadow-lg'}`}>
                             <div className="flex items-center space-x-6">
-                                <div className="bg-emerald-500 w-16 h-16 rounded-2xl flex items-center justify-center text-white group-hover:rotate-6 transition-transform shadow-2xl shadow-emerald-500/40">
-                                    <MessageCircle className="w-8 h-8" />
+                                <div className="bg-emerald-500 w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white group-hover:rotate-6 transition-transform shadow-2xl shadow-emerald-500/40">
+                                    <MessageCircle className="w-7 h-7 md:w-8 md:h-8" />
                                 </div>
                                 <div className="space-y-1">
-                                    <p className={`font-black text-xl font-display ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{t('contact.instant_support')}</p>
+                                    <p className={`font-black text-lg md:text-xl font-display ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{t('contact.instant_support')}</p>
                                     <div className="flex items-center gap-2">
                                         <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
                                         <p className="text-emerald-500 text-xs font-black uppercase tracking-widest">{t('contact.chat_whatsapp')}</p>

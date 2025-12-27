@@ -32,7 +32,7 @@ const Header = () => {
         <header className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-950/80 border-white/10' : 'bg-white/80 border-slate-200'
             }`}>
             <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-                <Link to="/" className="text-2xl font-black bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-display">
+                <Link to="/" className="text-2xl sm:text-2xl font-black bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-display tracking-tight transition-all">
                     SOUTH RIFT VALLEY
                 </Link>
 
@@ -129,7 +129,7 @@ const Header = () => {
                                 key={link.path}
                                 to={link.path}
                                 onClick={() => setIsOpen(false)}
-                                className={`text-2xl font-black font-display transition-colors ${activePath === link.path
+                                className={`text-3xl font-black font-display transition-colors ${activePath === link.path
                                     ? 'text-emerald-400'
                                     : theme === 'dark' ? 'text-slate-300' : 'text-slate-700'
                                     }`}
@@ -139,7 +139,7 @@ const Header = () => {
                         ))}
 
                         <div className="pt-6 border-t border-white/5">
-                            <p className="text-[10px] text-slate-500 mb-4 uppercase tracking-[0.2em] font-black">Select Language / ቋንቋ ምረጥ</p>
+                            <p className="text-xs text-slate-500 mb-4 uppercase tracking-[0.2em] font-black">Select Language / ቋንቋ ምረጥ</p>
                             <div className="grid grid-cols-2 gap-3">
                                 {langs.map((l) => (
                                     <button

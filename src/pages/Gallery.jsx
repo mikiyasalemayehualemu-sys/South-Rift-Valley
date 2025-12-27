@@ -42,13 +42,13 @@ const Gallery = () => {
                 <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8 reveal">
                     <div className="inline-flex items-center space-x-2 px-4 py-2 glass rounded-full border border-emerald-500/20 mb-4">
                         <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-500">Visual Journey</span>
+                        <span className="text-xs font-black uppercase tracking-[0.3em] text-emerald-500">Visual Journey</span>
                     </div>
-                    <h1 className="text-6xl md:text-9xl font-black font-display leading-[0.9] tracking-tighter">
+                    <h1 className="text-4xl md:text-9xl font-black font-display leading-[1.1] tracking-tighter">
                         CAPTURING<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 animate-gradient-flow">HERITAGE</span>
                     </h1>
-                    <p className={`max-w-2xl mx-auto text-lg md:text-xl font-sans font-medium leading-relaxed ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
+                    <p className={`max-w-2xl mx-auto text-base md:text-xl font-sans font-medium leading-relaxed ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
                         Every frame at South Rift Valley Hotel tells a story of tradition, luxury, and the warmth of Ethiopian hospitality.
                     </p>
                 </div>
@@ -61,11 +61,11 @@ const Gallery = () => {
                         <button
                             key={cat}
                             onClick={() => setActiveFilter(cat)}
-                            className={`px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all duration-500 border ${activeFilter === cat
-                                    ? 'bg-emerald-500 border-emerald-500 text-white shadow-xl shadow-emerald-500/20 -translate-y-1'
-                                    : theme === 'dark'
-                                        ? 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-emerald-500/40'
-                                        : 'bg-white border-slate-200 text-slate-500 hover:text-emerald-500'
+                            className={`px-6 py-2.5 md:px-8 md:py-3 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all duration-500 border ${activeFilter === cat
+                                ? 'bg-emerald-500 border-emerald-500 text-white shadow-xl shadow-emerald-500/20 -translate-y-1'
+                                : theme === 'dark'
+                                    ? 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-emerald-500/40'
+                                    : 'bg-white border-slate-200 text-slate-500 hover:text-emerald-500'
                                 }`}
                         >
                             {cat}
@@ -77,11 +77,11 @@ const Gallery = () => {
             {/* Modern Masonry Grid */}
             <section className="pb-40 px-4 relative">
                 <div className="max-w-7xl mx-auto">
-                    <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
+                    <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-8 space-y-6 md:space-y-8">
                         {filteredImages.map((img, idx) => (
                             <div
                                 key={img.id}
-                                className="group relative break-inside-avoid rounded-[3.5rem] overflow-hidden reveal transition-all duration-700 cursor-pointer shadow-3xl hover:-translate-y-4"
+                                className="group relative break-inside-avoid rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden reveal transition-all duration-700 cursor-pointer shadow-3xl hover:-translate-y-4"
                                 style={{ animationDelay: `${idx * 100}ms` }}
                                 onClick={() => setSelectedImg(img)}
                             >
@@ -94,13 +94,13 @@ const Gallery = () => {
                                 </div>
 
                                 {/* Premium Micro-Interaction Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10">
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 md:p-10">
                                     <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
-                                        <span className="text-emerald-400 text-xs font-black uppercase tracking-[0.4em] mb-3 block">{img.category}</span>
-                                        <h4 className="text-white text-3xl font-black font-display tracking-tight">{img.title}</h4>
+                                        <span className="text-emerald-400 text-xs font-black uppercase tracking-[0.4em] mb-2 md:mb-3 block">{img.category}</span>
+                                        <h4 className="text-white text-2xl md:text-3xl font-black font-display tracking-tight">{img.title}</h4>
                                     </div>
-                                    <div className="absolute top-8 right-8 bg-white/10 backdrop-blur-2xl p-4 rounded-3xl border border-white/20 transform scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500">
-                                        <Maximize2 className="w-6 h-6 text-white" />
+                                    <div className="absolute top-6 right-6 md:top-8 md:right-8 bg-white/10 backdrop-blur-2xl p-3 md:p-4 rounded-2xl md:rounded-3xl border border-white/20 transform scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500">
+                                        <Maximize2 className="w-5 h-5 md:w-6 md:h-6 text-white" />
                                     </div>
                                 </div>
                             </div>
